@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     fetch(request, env, ctx) {
         // Separate the URL path
         const url = new URL(request.url);

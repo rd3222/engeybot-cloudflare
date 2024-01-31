@@ -1,4 +1,4 @@
-name = "engeybot"
+name = "MudFaceBot"
 main = "src/worker.js"
 compatibility_date = "2023-12-19"
 workers_dev = true
