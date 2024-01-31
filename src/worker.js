@@ -3,7 +3,7 @@ export default {
         // Separate the URL path
         const url = new URL(request.url);
         // Only accepting '/webhook' path
-        if (url.pathname === '/webhook') {
+        if (url.pathname === 'https://mhagen.jmomentum1123.workers.dev/webhook') {
             return handleEvent(request, env);
         }
         return new Response("Not found", { status: 404 });
@@ -23,7 +23,7 @@ async function handleEvent(request, env) {
 	async function makePerplexityRequest(messageText) {
 		const url = 'https://api.perplexity.ai/chat/completions';
 		const params = {
-			model: 'pplx-7b-online',
+			model: 'pplx-70b-online',
 			messages: [
 				{ role: 'system', content: 'Be precise and concise.' },
 				{ role: 'user', content: messageText }
